@@ -3,29 +3,27 @@
     <head>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
-
-        
-        <form action="postUser" method="POST" role="form">
-            <legend>Add Your Details</legend>
+    <body>        
+        <form action="makeChanges/{{id}}" method="POST" role="form">
+            <legend>Update {{firstName}} {{lastName}}'s Details</legend>
         
             <div class="form-group" style="text-align:center;">
                 <br/>
                 <!-- <label for="firstName">First Name</label> -->
-                <input type="text" name="firstName" class="form-control" id="" placeholder="First Name here">
+                <input type="text" name="firstName" class="form-control" id="" placeholder="First Name here" value={{firstName}}>
                 <br/>
                 <!-- <label for="firstName">Last Name</label> -->
-                <input type="text" name="lastName" class="form-control" id="" placeholder="Last Name here">
+                <input type="text" name="lastName" class="form-control" id="" placeholder="Last Name here" value={{lastName}}>
                 <br/>
                 <!-- <label for="firstName">Email</label> -->
-                <input type="text" name="email" class="form-control" id="" placeholder="Email here">
+                <input type="text" name="email" class="form-control" id="" placeholder="Email here" value="{{email}}">
                 <br/>
                 <!-- <label for="firstName">Contact #</label> -->
-                <input type="text" name="contact" class="form-control" id="" placeholder="Contact here">                                
+                <input type="text" name="contact" class="form-control" id="" placeholder="Contact here" value={{contact}}>                                
                 <br/>
             </div>
             <div style="text-align:center">
-                <button type="submit" class="btn btn-primary">Add User</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </form>
     </body>
