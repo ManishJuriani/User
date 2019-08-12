@@ -2,15 +2,13 @@
 from flask import Flask, render_template , request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime as dt
-# from flask_msqldb import MySQL
 
 # import mysql.connector
 # from mysql.connector import Error, MySQLConnection
 # from mysql.connector import (connection)
 
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@localhost/users'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/users'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -72,11 +70,11 @@ def updateUser(user_id):
     
     updateData = User.query.filter_by(id=user_id).first()
     
-    firstName = updateData.firstName     
+    firstName = updateData.firstName  
     lastName = updateData.lastName
     email = updateData.email     
     contact = updateData.contact     
-    
+
     # redirect(url_for('index'))
     return render_template("updateForm.html",id=user_id,firstName=firstName,lastName=lastName,email=email,contact=contact)
 

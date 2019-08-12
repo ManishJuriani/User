@@ -12,20 +12,21 @@
             <div class="form-group" style="text-align:center;">
                 <br/>
                 <!-- <label for="firstName">First Name</label> -->
-                <input type="text" name="firstName" class="form-control" id="" placeholder="First Name here">
+                <input type="text" name="firstName" required class="form-control" id="" placeholder="First Name here">
                 <br/>
                 <!-- <label for="firstName">Last Name</label> -->
-                <input type="text" name="lastName" class="form-control" id="" placeholder="Last Name here">
+                <input type="text" name="lastName" required class="form-control" id="" placeholder="Last Name here">
                 <br/>
                 <!-- <label for="firstName">Email</label> -->
-                <input type="text" name="email" class="form-control" id="" placeholder="Email here">
+                <input type="text" name="email" required class="form-control" id="" placeholder="Email here">
                 <br/>
                 <!-- <label for="firstName">Contact #</label> -->
-                <input type="text" name="contact" class="form-control" id="" placeholder="Contact here">                                
+                <input type="text" name="contact" required maxlength="10" class="form-control" id="" placeholder="Contact here">
                 <br/>
+                <input type="text" name="address" id="address" class="form-control" placeholder="Address Here">
             </div>
             <div style="text-align:center">
-                <button type="submit" class="btn btn-primary">Add User</button>
+                <button type="submit" style="background-color:green;color:white" class="btn btn-primary">Add User</button>
             </div>
         </form>
     </body>
